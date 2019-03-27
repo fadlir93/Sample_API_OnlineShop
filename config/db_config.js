@@ -24,6 +24,7 @@ const db = {}
     db.rating = require('../model/rating')(sequelize,Sequelize)
     db.comment = require('../model/comment')(sequelize,Sequelize)
     db.cart = require('../model/cart')(sequelize,Sequelize)
+    db.transaction = require('../model/transaction')(sequelize, Sequelize)
 
     //relation
     db.member.belongsToMany(db.product, {through: 'rating', foreignKey: 'productId', otherKey: 'memberId'})
@@ -32,5 +33,7 @@ const db = {}
     db.product.belongsToMany(db.member, {through: 'comment', foreignKey: 'memberId', otherKey:'productId'})
     db.member.belongsToMany(db.product, {through: 'cart', foreignKey: 'productId', otherKey: 'memberId'})
     db.product.belongsToMany(db.member, {through: 'cart', foreignKey: 'memberId', otherKey:'productId'})
+    db.member.belongsToMany(db.product, {through: 'transaction', foreignKey: 'productId', otherKey: 'memberId'})
+    db.product.belongsToMany(db.member, {through: 'transaction', foreignKey: 'memberId', otherKey:'productId'})
 
 module.exports = db;
