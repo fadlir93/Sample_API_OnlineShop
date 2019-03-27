@@ -12,9 +12,13 @@ sequelize.authenticate()
         console.log(err);
     })
 
-    
+
 const db = {}
+    //config DB Sequelize
     db.Sequelize = Sequelize
     db.sequelize = sequelize
+
+    //models Table
+    db.member = require('../model/member')(sequelize,Sequelize)
 
 module.exports = db;
