@@ -20,5 +20,6 @@ const db = {}
 
     //models Table
     db.member = require('../model/member')(sequelize,Sequelize)
+    db.product = require('../model/product')(sequelize, Sequelize)
 
 module.exports = db;
