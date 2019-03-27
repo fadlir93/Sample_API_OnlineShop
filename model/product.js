@@ -27,5 +27,5 @@ module.exports = (sequelize, Sequelize) => {
         },
     );
     
-    return product;
+    return Product;
 }

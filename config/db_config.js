@@ -21,5 +21,10 @@ const db = {}
     //models Table
     db.member = require('../model/member')(sequelize,Sequelize)
     db.product = require('../model/product')(sequelize, Sequelize)
+    db.rating = require('../model/rating')(sequelize,Sequelize)
+
+    //relation
+    db.member.belongsToMany(db.product, {through: 'rating', foreignKey: 'productId', otherKey: 'memberId'})
+    db.product.belongsToMany(db.member, {through: 'rating', foreignKey: 'memberId', otherKey:'productId'})
 
 module.exports = db;
