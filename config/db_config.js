@@ -19,12 +19,12 @@ const db = {}
     db.sequelize = sequelize
 
     //models Table
-    db.member = require('../model/member')(sequelize,Sequelize)
-    db.product = require('../model/product')(sequelize, Sequelize)
-    db.rating = require('../model/rating')(sequelize,Sequelize)
-    db.comment = require('../model/comment')(sequelize,Sequelize)
-    db.cart = require('../model/cart')(sequelize,Sequelize)
-    db.transaction = require('../model/transaction')(sequelize, Sequelize)
+    db.member = require('../model/Member')(sequelize,Sequelize)
+    db.product = require('../model/Product')(sequelize, Sequelize)
+    db.rating = require('../model/Rating')(sequelize,Sequelize)
+    db.comment = require('../model/Comment')(sequelize,Sequelize)
+    db.cart = require('../model/Cart')(sequelize,Sequelize)
+    db.transaction = require('../model/Transaction')(sequelize, Sequelize)
 
     //relation
     db.member.belongsToMany(db.product, {through: 'rating', foreignKey: 'productId', otherKey: 'memberId'})
