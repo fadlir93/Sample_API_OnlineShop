@@ -12,3 +12,16 @@ exports.create = (req, res) => {
         res.send(result)
     })
 }
+
+exports.addStock = (req, res) => {
+    Product.findByPk(req.params.productId)
+    .then(product => {
+        Product.update({stock: (req.body.stock + product.dataValues.stock)}, {
+            where: {id: req.params.productId}
+        }).then(result => {
+            console.log(result)
+            res.send("berhasil merubah data")
+        })
+    })
+}
+
