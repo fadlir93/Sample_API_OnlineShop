@@ -7,6 +7,7 @@ checkDuplicateUserNameOrEmail = (req, res, next) => {
             username: req.body.username
         }
     }).then(username => {
+        console.log(username)
         if(username) {
             res.send("username is already taken")
         }
