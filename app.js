@@ -11,5 +11,6 @@ app.use(bodyParser.json())
 // })
 
 require('./routes/Product')(app)
+require('./routes/Member')(app)
 
 module.exports = app;
