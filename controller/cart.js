@@ -15,7 +15,9 @@ exports.addItem = (req, res) => {
 
 exports.listItem = (req, res) => {
   Cart.findAll({
-    memberId : req.userId,
+    where : {
+      memberId : req.userId
+    },
     attributes : [],
     include : [{
         model : db.product
@@ -26,17 +28,8 @@ exports.listItem = (req, res) => {
       res.send(err)
   })
 }
-// exports.addItem = (req, res) => {
-//   Cart.create({
-//     quantity: req.body.quantity,
-//     memberId: req.body.memberId,
-//     productId: req.body.productId
-//   }).then(() => {
-//     res.send("data berhasil dibuat")
-//   }).catch(err => {
-//     res.send(err)
-//   })
-// }
+
+
 
 
 
