@@ -25,6 +25,18 @@ exports.addStock = (req, res) => {
     })
 }
 
+// exports.findBySlug = (req, res) => {
+//     url = urlSlug(req.params.description)
+//     console.log(url)
+//     Product.findOne({
+//         where : {
+//             description : req.params.description
+//         }
+//     }).then(result => {
+//         res.send(result)
+//     })
+// }
+
 exports.findAll = (req, res) => {
     resultCount = 0
     if (req.params.count == 1){

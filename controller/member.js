@@ -38,7 +38,7 @@ exports.signin = (req, res) => {
                 reason: 'Invalid Password'
             })
         }
-        var token = jwt.sign({id: Member.id}, 'fadli-ramadhan', {expiresIn: 86400 })
+        var token = jwt.sign({id: username.id}, 'fadli-ramadhan', {expiresIn: 86400 })
         console.log(token)
         res.status(200).send({auth: true, accessToken: token})
     }).catch(err => {

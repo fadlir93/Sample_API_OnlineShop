@@ -3,6 +3,24 @@ module.exports = (sequelize, Sequelize) => {
         quantity: {
             type: Sequelize.INTEGER,
             allowNull: false
+        },
+        memberId: {
+            type: Sequelize.INTEGER,
+            onDelete: 'CASCADE',
+            reference: {
+                model: 'member',
+                key: 'id',
+                as: 'memberId',
+            }
+        },
+        productId: {
+            type: Sequelize.INTEGER,
+            onDelete: 'CASCADE',
+            reference: {
+                model: 'product',
+                key: 'id',
+                as: 'productId',
+            }
         }
     }, 
         {

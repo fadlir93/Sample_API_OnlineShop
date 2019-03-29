@@ -26,14 +26,11 @@ const db = {}
     db.cart = require('../model/Cart')(sequelize,Sequelize)
     db.transaction = require('../model/Transaction')(sequelize, Sequelize)
 
-    //relation
-    db.member.belongsToMany(db.product, {through: 'rating', foreignKey: 'productId', otherKey: 'memberId'})
-    db.product.belongsToMany(db.member, {through: 'rating', foreignKey: 'memberId', otherKey:'productId'})
-    db.member.belongsToMany(db.product, {through: 'comment', foreignKey: 'productId', otherKey: 'memberId'})
-    db.product.belongsToMany(db.member, {through: 'comment', foreignKey: 'memberId', otherKey:'productId'})
-    db.member.belongsToMany(db.product, {through: 'cart', foreignKey: 'productId', otherKey: 'memberId'})
-    db.product.belongsToMany(db.member, {through: 'cart', foreignKey: 'memberId', otherKey:'productId'})
-    db.member.belongsToMany(db.product, {through: 'transaction', foreignKey: 'productId', otherKey: 'memberId'})
-    db.product.belongsToMany(db.member, {through: 'transaction', foreignKey: 'memberId', otherKey:'productId'})
+    // relation
+    db.cart.belongsTo(db.member);
+    db.cart.belongsTo(db.product);
+    db.member.hasMany(db.cart);
+    db.product.hasMany(db.cart);
+    
 
 module.exports = db;
