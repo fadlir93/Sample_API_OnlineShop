@@ -25,11 +25,31 @@ exports.listItem = (req, res) => {
   }).then((list) => {
     res.send(list)      
   }).catch(err => {
-      res.send(err)
+    res.send(err)
   })
 }
 
-
+exports.deleteItem = (req, res) => {
+  Cart.destroy({
+    where : {
+      productId : req.body.productId,
+      memberId : req.userId
+    }
+  }).then(() => {
+    res.send("Item Success Deleted")
+  })
+}
+// exports.addItem = (req, res) => {
+//   Cart.create({
+//     quantity: req.body.quantity,
+//     memberId: req.body.memberId,
+//     productId: req.body.productId
+//   }).then(() => {
+//     res.send("data berhasil dibuat")
+//   }).catch(err => {
+//     res.send(err)
+//   })
+// }
 
 
 
