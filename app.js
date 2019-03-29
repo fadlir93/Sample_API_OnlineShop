@@ -27,7 +27,6 @@ app.use((error,req, res, next) => {
             flag: 'a'
         }
     )
-
     const code = error.code || 500;
     res.status(code);
     res.json({

@@ -4,26 +4,27 @@ const Member = db.member
 let jwt = require('jsonwebtoken');
 let bcrypt = require('bcryptjs');
 let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-exports.signup = (req, res) => {
-    if(re.test(req.body.email)){
-        return res.send("Email Wrong")
-    }else{
-        return res.send("Berhasil")
-        // Member.create({
-        //     username : req.body.username,
-        //     password : bcrypt.hashSync(req.body.password, 8),
-        //     email : req.body.email,
-        //     fullname : req.body.fullname,
-        //     address : req.body.address,
-        //     phone : req.body.phone,
-        //     gender : req.body.gender,
-        //     birthdate : req.body.birthdate
-        // }).then(() => {
-        //     res.send("Member success created")
-        // }).catch((err) => {
-        // }
-    // )
-}
+exports.signup = (req, res, next) => {
+    if(!re.test(req.body.email)){
+        return next({
+            message : "Email Wrong",
+            code: 404
+        });
+    }
+        Member.create({
+            username : req.body.username,
+            password : bcrypt.hashSync(req.body.password, 8),
+            email : req.body.email,
+            fullname : req.body.fullname,
+            address : req.body.address,
+            phone : req.body.phone,
+            gender : req.body.gender,
+            birthdate : req.body.birthdate
+        }).then(() => {
+            res.json("Member success created")
+        }).catch((err) => {
+        }
+    )
 }
 
 exports.signin = (req, res) => {
