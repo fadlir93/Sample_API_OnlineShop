@@ -5,17 +5,17 @@ const Member = db.member
 exports.addItem = (req, res) => {
     Member.findOne({
       where: {id: req.userId}
-    }).then(user => {
-        console.log(user)
-      Product.findAll()(products => {
-          console.log(products)
-        //   user.setProducts(products)
-          .then(() => {
-              res.send(products)
-          })
-          .catch(err => {
-              res.send(err)
-          })
+    }).then(() => {
+        Cart.create({
+          quantity: req.body.quantity,
+          memberId: req.userId,
+          productId: req.body.productId
+        })
+        .then(() => {
+          res.send("Item Success added to cart")
+        })
+      .catch(err => {
+          res.send(err)
       })
     }).catch(err => {
       res.status(500).json({
@@ -24,6 +24,18 @@ exports.addItem = (req, res) => {
       });
     })
 }
+
+// exports.addItem = (req, res) => {
+//   Cart.create({
+//     quantity: req.body.quantity,
+//     memberId: req.body.memberId,
+//     productId: req.body.productId
+//   }).then(() => {
+//     res.send("data berhasil dibuat")
+//   }).catch(err => {
+//     res.send(err)
+//   })
+// }
 
 
 
