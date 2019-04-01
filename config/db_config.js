@@ -27,12 +27,12 @@ const db = {}
     db.transaction = require('../model/Transaction')(sequelize, Sequelize)
 
     // relation
-    // db.cart.belongsTo(db.member);
-    // db.cart.belongsTo(db.product);
-    // db.member.hasMany(db.cart);
-    // db.product.hasMany(db.cart);
-    // db.transaction.belongsTo(db.cart);
-    // db.cart.hasMany(db.transaction);
+    db.cart.belongsTo(db.member);
+    db.cart.belongsTo(db.product);
+    db.member.hasMany(db.cart);
+    db.product.hasMany(db.cart);
+    db.transaction.belongsTo(db.cart);
+    db.cart.hasMany(db.transaction);
     
 
 module.exports = db;
