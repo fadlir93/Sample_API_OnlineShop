@@ -67,3 +67,10 @@ exports.paymentIndomaret = (req, res) => {
         })
     })
 }
+
+exports.statusPayment = (req, res) => {
+    core.transaction.status(req.body.transactionId)
+    .then(resultStatus => {
+        res.send(resultStatus)
+    })
+}
