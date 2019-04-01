@@ -21,6 +21,10 @@ module.exports = (sequelize, Sequelize) => {
                 key: 'id',
                 as: 'productId',
             }
+        },
+        status: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false
         }
     }, 
         {

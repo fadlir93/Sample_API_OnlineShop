@@ -1,5 +1,4 @@
 const db = require('../config/db_config')
-const Product = db.product
 const Cart = db.cart
 exports.addItem = (req, res) => {
   Cart.create({
