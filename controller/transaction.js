@@ -81,3 +81,13 @@ exports.cancelPayment = (req, res) => {
         res.send(resultCancel)
     })
 }
+
+exports.approvePayment = (req, res) => {
+    core.transaction.approve(req.body.transactionId)
+    .then(resultApprove => {
+        res.send(resultApprove)
+    })
+    .catch(err => {
+        res.send(err)
+    })
+}

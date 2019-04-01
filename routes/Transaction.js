@@ -4,4 +4,5 @@ module.exports = (app) => {
     app.get('/api/transaction/paymentIndomaret', [verifyjwt], Transaction.paymentIndomaret)
     app.post('/api/transaction/paymentStatus', [verifyjwt], Transaction.statusPayment)
     app.get('/api/transaction/cancel/:transactionId', [verifyjwt], Transaction.cancelPayment)
+    app.post('/api/transaction/approve', [verifyjwt], Transaction.approvePayment)
 }
