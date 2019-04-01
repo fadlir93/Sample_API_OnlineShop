@@ -4,11 +4,12 @@ const Member = db.member
 const Cart = db.cart
 const Product = db.product
 const midtransClient = require('midtrans-client')
+require('dotenv').config();
 
 let core = new midtransClient.CoreApi({
     isProduction : false,
-    serverKey : 'SB-Mid-server-S7fgoccz0l0jzt66f0Gx8X-C',
-    clientKey : 'SB-Mid-client-yhWWXuNE-gW8lUev'
+    serverKey : process.env.serverKey,
+    clientKey : process.env.clientKey
   });
 
 
