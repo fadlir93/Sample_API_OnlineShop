@@ -74,3 +74,10 @@ exports.statusPayment = (req, res) => {
         res.send(resultStatus)
     })
 }
+
+exports.cancelPayment = (req, res) => {
+    core.transaction.cancel(req.params.transactionId)
+    .then(resultCancel => {
+        res.send(resultCancel)
+    })
+}
