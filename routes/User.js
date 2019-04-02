@@ -10,7 +10,13 @@ router.get('/signup', function(req, res, next){
     res.render('user/signup');
 });
 
-router.post('/', function(req, res, next) {
+router.post('/signup', function(req, res, next) {
+    if(!re.test(req.body.email)){
+        return res.json({
+            message : "Email Wrong",
+            code: 404
+        });
+    }
         Member.create({
             username : req.body.username,
             password : bcrypt.hashSync(req.body.password, 8),
@@ -22,12 +28,14 @@ router.post('/', function(req, res, next) {
             birthdate : req.body.birthdate
         }).then(() => {
             // res.json("Member success created")
-            res.redirect("/")
+            req.flash('success', 'Successfully Create Member.');
+            res.redirect("/user/signin")
+
         })
 })
 
 router.get('/signin', function(req, res, next){
-    res.render('user/signin');
+    res.render('user/signin', {messages: req.flash('success')});
 });
 
 

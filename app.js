@@ -3,13 +3,21 @@ const bodyParser = require('body-parser');
 const fse = require('fs-extra');
 let expressHbs = require('express-handlebars')
 const path = require('path')
-
+const flash = require('connect-flash')
 const app = express();
+const session = require('express-session')
 
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json())
 
+app.use(session({
+    secret: 'zzzz', 
+    cookie: { maxAge: 60000 },
+    resave: false,    // forces the session to be saved back to the store
+    saveUninitialized: false  // dont save unmodified
+  }));
+app.use(flash())
 
 let indexRouter = require('./routes/Index')
 let userRouter = require('./routes/User')
@@ -23,6 +31,7 @@ let userRouter = require('./routes/User')
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, 'public')))
+
 
 app.use('/', indexRouter)
 app.use('/user', userRouter)
