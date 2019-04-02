@@ -9,3 +9,5 @@ Fri Mar 29 2019 17:14:41 GMT+0700 (Western Indonesia Time) - /api/member/signup 
 Fri Mar 29 2019 17:15:00 GMT+0700 (Western Indonesia Time) - /api/member/signup Email Wrong 
 Fri Mar 29 2019 21:20:32 GMT+0700 (Western Indonesia Time) - /api/transaction productName is not defined 
 Fri Mar 29 2019 21:21:21 GMT+0700 (Western Indonesia Time) - /api/transaction productName is not defined 
+Mon Apr 01 2019 18:25:16 GMT+0700 (Western Indonesia Time) - / ENOENT: no such file or directory, open '/Users/Nidiemacbook/Documents/nodejs/sample_APIonlineshop/views/layouts/layout.hbs' 
+Tue Apr 02 2019 08:44:06 GMT+0700 (Western Indonesia Time) - /user/signup req.flash is not a function 
