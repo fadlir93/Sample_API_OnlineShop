@@ -6,7 +6,7 @@ let bcrypt = require('bcryptjs');
 let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 exports.signup = (req, res, next) => {
     if(!re.test(req.body.email)){
-        return next({
+        return res.json({
             message : "Email Wrong",
             code: 404
         });
@@ -21,7 +21,8 @@ exports.signup = (req, res, next) => {
             gender : req.body.gender,
             birthdate : req.body.birthdate
         }).then(() => {
-            res.json("Member success created")
+            // res.json("Member success created")
+            res.json("berhasil di tambah")
         }).catch((err) => {
         }
     )

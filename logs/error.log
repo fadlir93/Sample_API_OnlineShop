@@ -11,3 +11,46 @@ Fri Mar 29 2019 21:20:32 GMT+0700 (Western Indonesia Time) - /api/transaction pr
 Fri Mar 29 2019 21:21:21 GMT+0700 (Western Indonesia Time) - /api/transaction productName is not defined 
 Mon Apr 01 2019 18:25:16 GMT+0700 (Western Indonesia Time) - / ENOENT: no such file or directory, open '/Users/Nidiemacbook/Documents/nodejs/sample_APIonlineshop/views/layouts/layout.hbs' 
 Tue Apr 02 2019 08:44:06 GMT+0700 (Western Indonesia Time) - /user/signup req.flash is not a function 
+Tue Apr 02 2019 11:21:52 GMT+0700 (Western Indonesia Time) - /api/member/signup Email Wrong 
+Tue Apr 02 2019 11:21:58 GMT+0700 (Western Indonesia Time) - /api/member/signup Email Wrong 
+Tue Apr 02 2019 11:24:32 GMT+0700 (Western Indonesia Time) - /user/signup re is not defined 
+Tue Apr 02 2019 11:28:52 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:43:48 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:47:54 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:49:00 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:49:12 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:49:18 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:49:51 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:50:44 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:50:47 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:51:18 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:51:49 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:52:45 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:56:54 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:57:57 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 11:58:45 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:02:12 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:02:17 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:10:30 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:18:16 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:18:41 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:18:51 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:19:39 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:20:14 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:20:28 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:21:11 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:22:01 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:23:19 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:23:52 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:27:51 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:28:40 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:29:32 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:30:01 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:35:58 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 12:36:03 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 13:28:34 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 13:37:30 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 13:40:43 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 13:47:11 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 13:47:24 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
+Tue Apr 02 2019 13:48:43 GMT+0700 (Western Indonesia Time) - /user/signup Illegal arguments: undefined, string 
