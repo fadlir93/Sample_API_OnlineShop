@@ -7,15 +7,13 @@ let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-z
 
 
 router.get('/signup', function(req, res, next){
-    res.render('user/signup');
+    res.render('user/signup', {messages : req.flash('fail')});
 });
 
 router.post('/signup', function(req, res, next) {
     if(!re.test(req.body.email)){
-        return res.json({
-            message : "Email Wrong",
-            code: 404
-        });
+        req.flash('fail', 'email yang anda masukkan salah')
+        return res.redirect('/user/signup')
     }
         Member.create({
             username : req.body.username,
