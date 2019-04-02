@@ -4,13 +4,13 @@ let db = require('../config/db_config')
 let Member = db.member
 let bcrypt = require('bcryptjs');
 let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-
+let checkDuplicateUsernameAndEmail = require('../validation/verifySignupForm')
 
 router.get('/signup', function(req, res, next){
     res.render('user/signup', {messages : req.flash('fail')});
 });
 
-router.post('/signup', function(req, res, next) {
+router.post('/signup',checkDuplicateUsernameAndEmail, function(req, res, next) {
     if(!re.test(req.body.email)){
         req.flash('fail', 'email yang anda masukkan salah')
         return res.redirect('/user/signup')
