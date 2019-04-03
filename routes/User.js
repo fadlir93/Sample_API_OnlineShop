@@ -33,8 +33,34 @@ router.post('/signup',checkDuplicateUsernameAndEmail, function(req, res, next) {
 })
 
 router.get('/signin', function(req, res, next){
-    res.render('user/signin', {messages: req.flash('success')});
+    res.render('user/signin', {messagesSuccess: req.flash('success'), messagesFail: req.flash('fail')});
 });
 
-
+router.post('/signin', function(req, res, next) {
+    Member.findOne({
+        where : {
+            username : req.body.username,
+        }
+    }).then(username => {
+        if(!username) {
+            req.flash('fail', 'Username yang anda masukkan salah')
+            return res.redirect('/user/signin')
+        }
+        var passwordValid = bcrypt.compareSync(req.body.password, username.password);
+        if(!passwordValid) {
+            req.flash('fail', 'Password yang anda masukkan salah')
+            return res.redirect('/user/signin')
+        }
+        var token = jwt.sign({id: username.id}, 'fadli-ramadhan', {expiresIn: 86400 })
+        req.flash('success', 'Berhasil Login')
+        return res.redirect('/user/signin')
+        res.status(200).send({auth: true, accessToken: token})
+    }).catch(err => {
+        console.log(err)
+        res.status(500)
+    })
+})
+// router.post('/signin', function(req, res, next) {
+//     res.
+// })
 module.exports = router

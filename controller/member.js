@@ -29,7 +29,6 @@ exports.signup = (req, res, next) => {
 }
 
 exports.signin = (req, res) => {
-    console.log("sign-in")
     Member.findOne({
         where : {
             username : req.body.username,
