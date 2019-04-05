@@ -47,7 +47,10 @@ exports.signin = (req, res) => {
             })
         }
         var token = jwt.sign({id: username.id}, 'fadli-ramadhan', {expiresIn: 86400 })
-        console.log(token)
+        let id = {
+            id : username.id
+        }
+        console.log(id)
         res.status(200).send({auth: true, accessToken: token})
     }).catch(err => {
         console.log(err)

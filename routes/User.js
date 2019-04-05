@@ -3,11 +3,19 @@ let router = express.Router()
 let db = require('../config/db_config')
 let Member = db.member
 let bcrypt = require('bcryptjs');
+let jwt = require('jsonwebtoken');
 let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 let checkDuplicateUsernameAndEmail = require('../validation/verifySignupForm')
+// let verifyJwt = require('../validation/verifyJwtTokenForm')
+var csrf = require('csurf');
+
+var csrfProtection = csrf();
+router.use(csrfProtection);
+
 
 router.get('/signup', function(req, res, next){
-    res.render('user/signup', {messages : req.flash('fail')});
+
+    res.render('user/signup', {messages : req.flash('fail'), csrfToken: req.csrfToken});
 });
 
 router.post('/signup',checkDuplicateUsernameAndEmail, function(req, res, next) {
@@ -52,15 +60,21 @@ router.post('/signin', function(req, res, next) {
             return res.redirect('/user/signin')
         }
         var token = jwt.sign({id: username.id}, 'fadli-ramadhan', {expiresIn: 86400 })
-        req.flash('success', 'Berhasil Login')
-        return res.redirect('/user/signin')
-        res.status(200).send({auth: true, accessToken: token})
+        localStorage.setItem('token', token);
+        
+        res.redirect("/user/profile")
     }).catch(err => {
         console.log(err)
         res.status(500)
     })
 })
-// router.post('/signin', function(req, res, next) {
-//     res.
-// })
+
+
+router.get('/profile',function(req, res, next){
+    res.header('x-access-token', localStorage.getItem('token'))
+    res.render('user/profile', {hello : 'hello'});
+});
+
+router.get('/profile')
+
 module.exports = router

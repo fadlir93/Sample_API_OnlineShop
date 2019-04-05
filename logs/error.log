@@ -101,3 +101,29 @@ Tue Apr 02 2019 17:13:18 GMT+0700 (Western Indonesia Time) - /user/signin Parse 
 ...#if (success.length > 0)}}             
 -----------------------^
 Expecting 'CLOSE_RAW_BLOCK', 'CLOSE', 'CLOSE_UNESCAPED', 'OPEN_SEXPR', 'CLOSE_SEXPR', 'ID', 'OPEN_BLOCK_PARAMS', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', 'SEP', got 'INVALID' 
+Wed Apr 03 2019 21:01:09 GMT+0700 (Western Indonesia Time) - /user/profile username is not defined 
+Wed Apr 03 2019 21:01:41 GMT+0700 (Western Indonesia Time) - /user/profile username is not defined 
+Wed Apr 03 2019 21:56:17 GMT+0700 (Western Indonesia Time) - /user/profile req.token is not a function 
+Wed Apr 03 2019 22:18:07 GMT+0700 (Western Indonesia Time) - /user/profile username is not defined 
+Wed Apr 03 2019 22:18:38 GMT+0700 (Western Indonesia Time) - /user/profile username is not defined 
+Wed Apr 03 2019 22:21:15 GMT+0700 (Western Indonesia Time) - /user/profile username is not defined 
+Wed Apr 03 2019 22:21:40 GMT+0700 (Western Indonesia Time) - /user/profile username is not defined 
+Thu Apr 04 2019 12:11:30 GMT+0700 (Western Indonesia Time) - /user/profile Unexpected token a in JSON at position 0 
+Thu Apr 04 2019 12:12:02 GMT+0700 (Western Indonesia Time) - /user/profile Unexpected token a in JSON at position 0 
+Thu Apr 04 2019 15:12:14 GMT+0700 (Western Indonesia Time) - /signup Failed to lookup view "signup" in views directory "/Users/Nidiemacbook/Documents/nodejs/sample_APIonlineshop/views" 
+Thu Apr 04 2019 15:14:27 GMT+0700 (Western Indonesia Time) - /user/signin Failed to lookup view "signin" in views directory "/Users/Nidiemacbook/Documents/nodejs/sample_APIonlineshop/views" 
+Thu Apr 04 2019 15:26:59 GMT+0700 (Western Indonesia Time) - /user/signup username is not defined 
+Thu Apr 04 2019 15:28:55 GMT+0700 (Western Indonesia Time) - /user/signup username is not defined 
+Thu Apr 04 2019 15:32:19 GMT+0700 (Western Indonesia Time) - /user/dashboard Failed to lookup view "dashboard" in views directory "/Users/Nidiemacbook/Documents/nodejs/sample_APIonlineshop/views" 
+Thu Apr 04 2019 15:33:58 GMT+0700 (Western Indonesia Time) - /user/signin Unknown authentication strategy "local-signin" 
+Thu Apr 04 2019 16:43:52 GMT+0700 (Western Indonesia Time) - /user/signup message is not defined 
+Thu Apr 04 2019 16:44:15 GMT+0700 (Western Indonesia Time) - /user/signup message is not defined 
+Thu Apr 04 2019 17:27:49 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
+Thu Apr 04 2019 17:40:24 GMT+0700 (Western Indonesia Time) - /user/dashboard Cannot read property 'username' of undefined 
+Thu Apr 04 2019 17:40:32 GMT+0700 (Western Indonesia Time) - /user/dashboard Cannot read property 'username' of undefined 
+Thu Apr 04 2019 17:43:19 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
+Thu Apr 04 2019 17:43:29 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
+Thu Apr 04 2019 17:43:34 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
+Thu Apr 04 2019 17:47:37 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
+Thu Apr 04 2019 17:47:54 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
+Thu Apr 04 2019 17:50:28 GMT+0700 (Western Indonesia Time) - /user/dashboard member is not defined 

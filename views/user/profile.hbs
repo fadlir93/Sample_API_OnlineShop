@@ -1,2 +1,12 @@
-{{name}}
-<input type="hidden" name="_csrf" value="{{x-access-token}}">
+Test user profile
+
+<input type="text" id="test" class="form-control" value={{hello}} >
+
+<script>
+    $.ajax({
+    headers: {
+        'x-access-token': 'hello'
+    },
+    url: 'http://localhost:7000/user/profile'
+});
+</script>
