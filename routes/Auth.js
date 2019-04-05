@@ -15,7 +15,6 @@ module.exports = function(app,passport){
     app.get('/user/dashboard',isLoggedIn, authController.dashboard);
     app.get('/logout',authController.logout);
 
-
     app.post('/user/signin', passport.authenticate('local-signin',
         { 
             successRedirect: '/user/dashboard',
@@ -24,9 +23,7 @@ module.exports = function(app,passport){
     ));
 
     function isLoggedIn(req, res, next) {
-        if (req.isAuthenticated()){
-            
-            console.log(req.isAuthenticated) 
+        if (req.isAuthenticated()){ 
             return next();
         }
         res.redirect('/user/signin');

@@ -135,3 +135,83 @@ Fri Apr 05 2019 10:24:55 GMT+0700 (Western Indonesia Time) - / Parse error on li
 ...a></li>            {{ else }}         
 ----------------------^
 Expecting 'EOF', got 'INVERSE' 
+Fri Apr 05 2019 12:54:01 GMT+0700 (Western Indonesia Time) - / Parse error on line 18:
+... class="price">Rp.{{}} <small>each</smal
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE' 
+Fri Apr 05 2019 12:54:02 GMT+0700 (Western Indonesia Time) - / Parse error on line 18:
+... class="price">Rp.{{}} <small>each</smal
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE' 
+Fri Apr 05 2019 12:54:03 GMT+0700 (Western Indonesia Time) - / Parse error on line 18:
+... class="price">Rp.{{}} <small>each</smal
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE' 
+Fri Apr 05 2019 12:54:04 GMT+0700 (Western Indonesia Time) - / Parse error on line 18:
+... class="price">Rp.{{}} <small>each</smal
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE' 
+Fri Apr 05 2019 12:54:27 GMT+0700 (Western Indonesia Time) - / Parse error on line 13:
+... <span class="h2">{{}}</span>          
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE' 
+Fri Apr 05 2019 12:54:57 GMT+0700 (Western Indonesia Time) - / Parse error on line 13:
+... <span class="h2">{{productName[0]}}</sp
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' 
+Fri Apr 05 2019 12:54:58 GMT+0700 (Western Indonesia Time) - / Parse error on line 13:
+... <span class="h2">{{productName[0]}}</sp
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' 
+Fri Apr 05 2019 12:54:59 GMT+0700 (Western Indonesia Time) - / Parse error on line 13:
+... <span class="h2">{{productName[0]}}</sp
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' 
+Fri Apr 05 2019 12:54:59 GMT+0700 (Western Indonesia Time) - / Parse error on line 13:
+... <span class="h2">{{productName[0]}}</sp
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' 
+Fri Apr 05 2019 12:55:00 GMT+0700 (Western Indonesia Time) - / Parse error on line 13:
+... <span class="h2">{{productName[0]}}</sp
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' 
+Fri Apr 05 2019 13:17:43 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+... class="price">Rp.{{(product.price).toLo
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'OPEN_SEXPR' 
+Fri Apr 05 2019 13:17:44 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+... class="price">Rp.{{(product.price).toLo
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'OPEN_SEXPR' 
+Fri Apr 05 2019 13:17:45 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+... class="price">Rp.{{(product.price).toLo
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'OPEN_SEXPR' 
+Fri Apr 05 2019 13:17:45 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+... class="price">Rp.{{(product.price).toLo
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'OPEN_SEXPR' 
+Fri Apr 05 2019 13:17:53 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+...>Rp.{{product.price.toLocaleStrin('de-DE
+-----------------------^
+Expecting 'ID', got 'INVALID' 
+Fri Apr 05 2019 13:17:54 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+...>Rp.{{product.price.toLocaleStrin('de-DE
+-----------------------^
+Expecting 'ID', got 'INVALID' 
+Fri Apr 05 2019 13:17:54 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+...>Rp.{{product.price.toLocaleStrin('de-DE
+-----------------------^
+Expecting 'ID', got 'INVALID' 
+Fri Apr 05 2019 13:17:55 GMT+0700 (Western Indonesia Time) - / Parse error on line 19:
+...>Rp.{{product.price.toLocaleStrin('de-DE
+-----------------------^
+Expecting 'ID', got 'INVALID' 
+Fri Apr 05 2019 13:26:50 GMT+0700 (Western Indonesia Time) - / Missing helper: "currency" 
+Fri Apr 05 2019 13:31:41 GMT+0700 (Western Indonesia Time) - / Missing helper: "currency" 
+Fri Apr 05 2019 13:31:41 GMT+0700 (Western Indonesia Time) - / Missing helper: "currency" 
+Fri Apr 05 2019 13:31:42 GMT+0700 (Western Indonesia Time) - / Missing helper: "currency" 
+Fri Apr 05 2019 13:31:49 GMT+0700 (Western Indonesia Time) - / Missing helper: "currency" 
+Fri Apr 05 2019 15:37:12 GMT+0700 (Western Indonesia Time) - /payment/add-to-cart/1 Cart is not defined 
+Fri Apr 05 2019 15:39:29 GMT+0700 (Western Indonesia Time) - /payment/add-to-cart/1 Product is not defined 
+Fri Apr 05 2019 15:39:34 GMT+0700 (Western Indonesia Time) - /payment/add-to-cart/1 Product is not defined 

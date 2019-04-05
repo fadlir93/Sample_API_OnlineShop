@@ -25,12 +25,14 @@ app.use(passport.session());
 
 app.use(function(req, res, next) {
     res.locals.login = req.isAuthenticated();
+    res.locals.session = req.session
     next();
 });
 
 app.use(flash())
 
 let indexRouter = require('./routes/Index')
+let paymentRouter = require('./routes/Payment')
 // const db = require('./config/db_config')
 // db.sequelize.sync().then(() => {
 //     console.log('Table success created')
@@ -42,6 +44,7 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
+app.use('/payment', paymentRouter)
 
 require('./routes/Auth')(app,passport)
 require('./routes/API/Product')(app)

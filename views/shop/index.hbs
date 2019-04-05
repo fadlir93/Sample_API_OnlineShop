@@ -1,1 +1,34 @@
-TEST
+<div class="container">
+  <div class="row">
+      <div class="page-header">
+      </div>
+  </div> 
+<div class="row">
+    
+    {{#each product as |product|}}
+    <div class="col-sm-4" style="margin-bottom:20px"> 
+        <div class="card card-price">
+            <div class="card-img">
+                <img src="http://placeimg.com/640/320/nature/grayscale" class="img-responsive">
+                <div class="card-caption">
+                    <span class="h2">{{product.productName}}</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="price">Rp.{{product.price}} <small>each</small></div>
+                <div class="lead">Jenis: {{product.productType}}</div>
+                <ul class="details">
+                <li>A stitch in time saves nine.</li>
+                <li>All good things come to those who wait.</li>
+                <li><b>Shipping:</b> $10 in USA, $15 outside USA</li>
+                </ul>
+                <a href="/payment/add-to-cart/{{product.id}}" class="btn btn-primary btn-lg btn-block buy-now">
+                Buy now <span class="glyphicon glyphicon-triangle-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+  

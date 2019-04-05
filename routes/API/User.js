@@ -1,11 +1,11 @@
 let express = require('express')
 let router = express.Router()
-let db = require('../config/db_config')
+let db = require('../../config/db_config')
 let Member = db.member
 let bcrypt = require('bcryptjs');
 let jwt = require('jsonwebtoken');
 let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-let checkDuplicateUsernameAndEmail = require('../validation/verifySignupForm')
+let checkDuplicateUsernameAndEmail = require('../../validation/verifySignupForm')
 // let verifyJwt = require('../validation/verifyJwtTokenForm')
 var csrf = require('csurf');
 

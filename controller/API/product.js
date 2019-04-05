@@ -1,4 +1,4 @@
-const db = require('../config/db_config')
+const db = require('../../config/db_config')
 const Product = db.product
 
 exports.create = (req, res) => {
@@ -68,19 +68,4 @@ exports.findAll = (req, res, next) => {
     .catch((err)=> {
         next(err);
     })
-
-    // resultCount = 0
-    // if (req.params.count == 1){
-    //     resultCount = 0
-    // }else if(req.params.count == 2){
-    //     resultCount = 2
-    // }else {
-    //     resultCount = ((req.params.count - 1) * 2)
-    // }
-    // Product.findAll({
-    //     limit: 2,
-    //     offset: (0 + resultCount) 
-    // }).then( result => {
-    //     res.send(result)
-    // })
 }

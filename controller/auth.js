@@ -1,6 +1,5 @@
 var exports = module.exports = {}
-const db = require('../config/db_config')
-const member = db.member
+
 exports.signup = function(req,res){
 	res.render('user/signup', {message: req.flash('message')}); 
 }

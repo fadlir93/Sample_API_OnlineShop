@@ -1,4 +1,4 @@
-const db = require('../config/db_config')
+const db = require('../../config/db_config')
 const Member = db.member
 
 let jwt = require('jsonwebtoken');

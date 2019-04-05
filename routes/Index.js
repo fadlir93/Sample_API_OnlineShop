@@ -1,8 +1,13 @@
 let express = require('express')
 let router = express.Router();
+const db = require('../config/db_config')
+const Product = db.product
 
 router.get('/', (req, res, next) => {
-    res.render('shop/index', {title: 'Shoping Cart'})
+    Product.findAll().then(product => {
+        
+        res.render('shop/index', {product: product})
+    })
 })
 
 

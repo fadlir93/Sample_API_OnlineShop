@@ -1,4 +1,4 @@
-const db = require('../config/db_config')
+const db = require('../../config/db_config')
 const Transaction = db.transaction
 const Member = db.member
 const Cart = db.cart
