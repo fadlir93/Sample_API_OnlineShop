@@ -127,3 +127,11 @@ Thu Apr 04 2019 17:43:34 GMT+0700 (Western Indonesia Time) - /user/dashboard use
 Thu Apr 04 2019 17:47:37 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
 Thu Apr 04 2019 17:47:54 GMT+0700 (Western Indonesia Time) - /user/dashboard userinfo is not defined 
 Thu Apr 04 2019 17:50:28 GMT+0700 (Western Indonesia Time) - /user/dashboard member is not defined 
+Fri Apr 05 2019 10:24:53 GMT+0700 (Western Indonesia Time) - / Parse error on line 25:
+...a></li>            {{ else }}         
+----------------------^
+Expecting 'EOF', got 'INVERSE' 
+Fri Apr 05 2019 10:24:55 GMT+0700 (Western Indonesia Time) - / Parse error on line 25:
+...a></li>            {{ else }}         
+----------------------^
+Expecting 'EOF', got 'INVERSE' 
