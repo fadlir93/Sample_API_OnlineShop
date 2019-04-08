@@ -24,7 +24,7 @@ router.get('/cart', (req, res, next) => {
 		return res.render('payment/cart', {products: null})
 	}
 		var cart = new Cart(req.session.cart);
-		res.render('payment/cart', {products: cart.generateArray(), totalPrice: cart.totalPrice})
+		res.render('payment/cart', {products: cart.generateArray(), totalPrice: cart.totalPrice.toLocaleString('de-DE')})
 })
 
 module.exports = router;

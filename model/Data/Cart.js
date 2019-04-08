@@ -19,6 +19,11 @@ module.exports = function Cart(cart) {
         for (var id in this.items){
             arr.push(this.items[id])
         }
+        for(let i = 0; i < arr.length; i++){
+            arr[i].item.price = arr[i].item.price.toLocaleString('de-DE')
+            arr[i].price = arr[i].price.toLocaleString('de-DE')
+        }
+        console.log(arr[0])
         return arr
     }
 }
