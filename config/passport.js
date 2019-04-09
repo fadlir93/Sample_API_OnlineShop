@@ -64,7 +64,7 @@ module.exports = function(passport, member) {
                                     return done(null,false)
                                 }
                                 if(newUser){
-                                    return done(null, newUser);
+                                    return done(null, newUser, req.flash('message', 'User Berhasil Di Buat'));
                                 }
                             })
                         }
@@ -99,7 +99,7 @@ module.exports = function(passport, member) {
                 var userinfo = user.get();
                 req.userId = userinfo.id
                 console.log(req.userId)
-                done(null, userinfo);
+                done(null, userinfo, req.flash('message', `Selamat datang di halaman Dashboard Mr. ${userinfo.fullname}`));
             }).catch(function(err) {
                 console.log("Error:", err);
                 return done(null, false, {

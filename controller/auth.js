@@ -7,7 +7,7 @@ exports.signin = function(req,res){
 	res.render('user/signin', {message: req.flash('message')}); 
 }
 exports.dashboard = function(req,res){
-	res.render('user/dashboard', {user: req.user.username}); 
+	res.render('user/dashboard', {message: req.flash('message'),user: req.user.username}); 
 }
 exports.logout = function(req,res){
   req.session.destroy(function(err) {

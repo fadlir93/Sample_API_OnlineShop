@@ -27,4 +27,15 @@ router.get('/cart', (req, res, next) => {
 		res.render('payment/cart', {products: cart.generateArray(), totalPrice: cart.totalPrice.toLocaleString('de-DE')})
 })
 
+router.get('/checkout',isLoggedIn, (req, res, next) => {
+		res.render('payment/checkout')
+})
+
+function isLoggedIn(req, res, next) {
+	if (req.isAuthenticated()){ 
+		return next();
+	}
+	req.flash('message', 'Silahkan Login Terlebih Dahulu Untuk Bisa Melakukan Proses Berikutnya')
+	res.redirect('/user/signin');
+}
 module.exports = router;

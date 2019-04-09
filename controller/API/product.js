@@ -49,20 +49,17 @@ exports.findAll = (req, res, next) => {
     .then(({count, rows}) => {
         
         if(rows.length == 0){
-            // let error = new Error();
-            
             return next({
                 message: "Not Found",
                 code: 404
             });
         }
-
         res.json({
             data: rows,
             page,
             count: rows.length,
             total_count: count,
-            total_page: Math.ceil(count / perPage),
+            total_page: Math.ceil(count / perPage), 
         })
     })
     .catch((err)=> {

@@ -6,7 +6,22 @@
 						<div class="form-group">
 							<h2>Sign-In account</h2>
 									{{#if message}}
-										<div class="alert alert-danger">{{message}}</div>
+										<div id="myModal" class="modal fade">
+											<div class="modal-dialog">
+													<div class="modal-content">
+															<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																	{{!-- <h4 class="modal-title">Welcome</h4> --}}
+															</div>
+															<div class="modal-body">
+																	<p>{{message}}</p>
+															</div>
+															<div class="modal-footer">
+																	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															</div>
+													</div>
+											</div>
+										</div>
 									{{/if}}
 						</div>
 						<div class="form-group">
@@ -25,3 +40,9 @@
 			</div>
 		</div>
 	</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
