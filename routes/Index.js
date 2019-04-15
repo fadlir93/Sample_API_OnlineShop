@@ -5,7 +5,6 @@ const Product = db.product
 
 router.get('/', (req, res, next) => {
     Product.findAll().then(product => {
-        
         res.render('shop/index', {product: product})
     })
 })

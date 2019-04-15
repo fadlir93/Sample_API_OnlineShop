@@ -3,5 +3,5 @@ module.exports = (app) => {
     const validationUsernameAndEmail = require('../../validation/verifySignup')
     app.post('/api/member/signup', [validationUsernameAndEmail], Member.signup)
     app.post('/api/member/signin', Member.signin)
-    
+    app.post('/api/member/forgotpassword', Member.forgot)
 }

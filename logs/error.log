@@ -360,3 +360,7 @@ Tue Apr 09 2019 15:28:05 GMT+0700 (Western Indonesia Time) - /payment/checkout P
 ---------------------^
 Expecting 'EOF', got 'OPEN_ENDBLOCK' 
 Tue Apr 09 2019 15:57:39 GMT+0700 (Western Indonesia Time) - /user/dashboard Invalid status code: [object Object] 
+Wed Apr 10 2019 14:23:15 GMT+0700 (Western Indonesia Time) - /user/resetPassword Failed to lookup view "/" in views directory "/Users/Nidiemacbook/Documents/nodejs/sample_APIonlineshop/views" 
+Wed Apr 10 2019 14:26:50 GMT+0700 (Western Indonesia Time) - /user/resetPassword bcrypt is not defined 
+Wed Apr 10 2019 14:59:51 GMT+0700 (Western Indonesia Time) - /user/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTF9.OJccJIdiwUVES41vwcLVdICFnpmWRl5DNZijYZ1 Signature verification failed 
+Wed Apr 10 2019 15:00:13 GMT+0700 (Western Indonesia Time) - /user/resetPassword/eyJiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTF9.OJccJIdiwUVES41vwcLVdICFnpmWRl5DNZijYZ1b0lM Unexpected token J in JSON at position 5 
